@@ -1,3 +1,24 @@
+# Github-installed in-development version (> 1.1.0)
+
+
+
+
+# siftr 1.1.0
+
+- FIXED
+    - Removed `useHash = TRUE` from `sample.int()` inside `should_approx()` to match changes made in R 4.2.0. `sample.int()` now decided for itself whether to `useHash` or not. Closes <https://github.com/DesiQuintans/siftr/issues/16>.
+
+- ADDED
+    - save_dictionary() writes an empty `exclude` column to factor files.
+    
+- CHANGED
+    - Changes to sift()'s announcement of a dictionary's contents. Closes <https://github.com/DesiQuintans/siftr/issues/15>:
+        - Now says "{dataframe name} contains n columns..." instead of the generic "Dictionary contains n columns...".
+        - Now shows head and tail of column names rather than just the head.
+    - save_dictionary() writes only one cell of the `ordered` column, to conform to what real-world users would do.
+
+
+
 # siftr 1.0.1
 
 - ADDED
